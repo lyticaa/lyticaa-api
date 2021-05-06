@@ -10,7 +10,7 @@ require (
 	github.com/aws/aws-sdk-go v1.35.8
 	github.com/codegangsta/negroni v1.0.0
 	github.com/dgrijalva/jwt-go v3.2.0+incompatible
-	github.com/getsentry/sentry-go v0.7.0
+	github.com/getsentry/sentry-go v0.10.0
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/johannesboyne/gofakes3 v0.0.0-20191029185751-e238f04965fe
