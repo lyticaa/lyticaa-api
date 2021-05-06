@@ -1,0 +1,62 @@
+openapi: 3.0.0
+info:
+  title: Lyticaa API
+  version: 0.0.1-oas3
+  contact:
+    email: hello@lyticaa.com
+  description: Lyticaa API
+paths:
+  "/api/health_check":
+    get:
+      summary: Get Health
+      description: Returns the health status.
+      responses:
+        "200":
+          $ref: '#/components/responses/HealthCheckResponse'
+      tags:
+        - Health
+  "/api/v1/users/upload_url":
+    get:
+      summary: Get Upload URL
+      description: Returns a unique upload URL
+      responses:
+        "200":
+          $ref: '#/components/responses/UploadUrlResponse'
+        "401":
+          $ref: '#/components/responses/UnauthorizedError'
+      tags:
+        - User
+security:
+  - bearerAuth: []
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+  responses:
+    HealthCheckResponse:
+      description: Health Check response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              status:
+                type: string
+                example: "OK"
+    UploadUrlResponse:
+      description: Upload URL response
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              url:
+                type: string
+                example: "https://s3.us-west-1.amazonaws.com/com.lyticaa.reports.development/isdjskdj992839kshd873"
+    UnauthorizedError:
+      description: token invalid
+servers:
+  - url: http://127.0.0.1:3000
+  - url: https://127.0.0.1:3000

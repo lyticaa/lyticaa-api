@@ -1,0 +1,41 @@
+# OS
+.DS_Store
+*.swp
+*.swo
+.vscode
+.idea
+.env*
+
+# Build
+vendor
+.vendor-new
+observe
+
+# IDE
+.idea/
+*.iml
+
+# Node
+node_modules/
+
+alice.txt
+jack.txt
+bin/
+thord
+*.exe
+
+.testCoverage.txt
+c.out
+*.leveldb/
+.envrc
+log
+blockscannertest/
+statechaintest/
+*.log
+*.ldb
+*/observer_db
+*/signer_db
+*.out
+
+pkg/
+src/
