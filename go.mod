@@ -14,6 +14,6 @@ require (
 	github.com/gorilla/handlers v1.5.1
 	github.com/gorilla/mux v1.8.0
 	github.com/johannesboyne/gofakes3 v0.0.0-20191029185751-e238f04965fe
-	github.com/newrelic/go-agent v2.16.3+incompatible
+	github.com/newrelic/go-agent v3.15.2+incompatible
 	github.com/rs/zerolog v1.20.0
 )
